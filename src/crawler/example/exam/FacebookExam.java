@@ -25,7 +25,7 @@ public class FacebookExam {
 
 		String uri = 
 				"https://graph.facebook.com/v2.8"
-		        + "/crazyck101/posts?fields=reactions.limit(0).summary(total_count)&since=1480851000&util=1480854600"
+		        + "/crazyck101/posts?fields=reactions.limit(0).summary(total_count)&since=1480853000&until=1480854000"
 				+ "&access_token=EAACEdEose0cBAAFCar9W0ZCRjppCXcoVmSoIVYlNzY3ZAjmLFtRvVjxPJ6rTFl3UxFldnEFwFzVZAhFoyr1o4T0D4VjIZCdAthkISrcWHEJfzWCWV9W2vQ9J4RPx969CX2fDi9A4j2fjKbdO7OcLt8gBRzIiJ52DOExZAz7ZCz1AZDZD";
 
 

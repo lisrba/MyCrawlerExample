@@ -34,17 +34,19 @@ public class FacebookExam {
 				.getFromJson(uri)
 				.select("data");
 		
-		String output = "id,reactions";
+		String id;
+		String reactions;
+		String output="";
 
 		// 遂筆處理
 		for( Element data: elems ){
-			String id = data.select("id").text();
+			id = data.select("id").text();
 
 			// FIXIT
-			String reactions = data.select("reactions total_count").text();
+			reactions = data.select("reactions total_count").text();
 
 
-			output += id + "," + reactions + "\n";
+			output = "ID="+id+", "+"REACTIONS="+reactions + "\n";
 		}
 
 		System.out.println( output );

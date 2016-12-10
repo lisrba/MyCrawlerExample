@@ -21,32 +21,32 @@ import org.jsoup.nodes.Element;
  */
 public class RealPriceExam {
 	public static void main(String[] args) {
-		
+
 		String uri = "zip:http://plvr.land.moi.gov.tw"
-				+ "/Download?type=zip&fileName=lvr_landxml.zip"
-				+ "!/A_LVR_LAND_A.XML";
-
-
+					+ "/Download?type=zip&fileName=lvr_landxml.zip"
+					+ "!/E_LVR_LAND_C.XML";
 		Document jsoupDoc = CrawlerPack.start()
-				.getFromXml(uri);
+					.getFromXml(uri);
+			// 印出整份 XML 資料
+			//		System.out.println(jsoupDoc.toString());
 
-		// 印出整份 XML 資料
-//		System.out.println(jsoupDoc.toString());
+			// print head
+			System.out.println("鄉鎮市區,都市土地使用分區,土地區段位置或建物區門牌,總價元,單價每平方公尺");
 
-		// print head
-		System.out.println("鄉鎮市區,都市土地使用分區,土地區段位置或建物區門牌,總價元,單價每平方公尺");
-
-		for( Element elem: jsoupDoc.select("買賣") ){
-			System.out.print("\""+elem.select("鄉鎮市區").text()+"\"");
-			System.out.print(",\""+elem.select("都市土地使用分區").text()+"\"");
-			System.out.print(",\""+elem.select("土地區段位置或建物區門牌").text()+"\"");
-			System.out.print(","+elem.select("總價元").text());
-			System.out.print(","+elem.select("單價每平方公尺").text());
-			System.out.println();
+			for( Element elem: jsoupDoc.select("租賃") ){
+				System.out.print("\""+elem.select("鄉鎮市區").text()+"\"");
+				System.out.print(",\""+elem.select("都市土地使用分區").text()+"\"");
+				System.out.print(",\""+elem.select("土地區段位置或建物區門牌").text()+"\"");
+				System.out.print(","+elem.select("總價元").text());
+				System.out.print(","+elem.select("單價每平方公尺").text());
+				System.out.println();
+			}
 		}
 
 
 
-	}	
+
+
+
 	
 }

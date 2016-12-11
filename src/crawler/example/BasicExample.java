@@ -20,7 +20,7 @@ public class BasicExample {
 		// turn off logging
 		CrawlerPack.setLoggerLevel(SimpleLog.LOG_LEVEL_OFF);
 
-		// 遠端資料路徑
+		//  遠端資料路徑
 		String uri = "tar:gz:http://crawler:12345678@128.199.204.20:8080"
 				+ "/httpLogin/download.tar.gz"
 				+ "!download.tar"

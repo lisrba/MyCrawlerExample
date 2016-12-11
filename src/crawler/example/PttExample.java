@@ -41,7 +41,7 @@ public class PttExample {
 				//.select("div.push + span") //找跟推噓文div同層的span-->編輯記錄
 				//.select("div.push ~ div") //看所有推噓文
 				//.select("[type]")
-				.select(".push-tag:contains(推) ~ span")
+				.select(".push-tag:contains(推) ~ span") //找推文資訊
 
 
 			    

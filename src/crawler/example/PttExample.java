@@ -45,9 +45,9 @@ public class PttExample {
 				//.select("[type]")
 				//.select(".push-tag:contains(推) ~ span") //找推文資訊
 
-				for (Element elem : content.select("div#main-content *")) {
+				for (Element elem : content.select("#main-content *")) {
 					elem.remove();
 				}
-				System.out.print(content.select("div#main-content").text());
+				System.out.println(content.select("#main-content").text());
 	}
 }
